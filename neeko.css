@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg, rgb(196, 198, 222), rgb(212, 216, 252));
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.neeko {
+    margin: auto;
+    width: 450px;
+    transition: 0.2s ease-in-out;
+    filter: drop-shadow(10px 2px 10px black);
+}
+
+.neeko:hover {
+    pointer-events: auto;
+    width: 460px;
+    filter: drop-shadow(10px 1px 10px white);
+}
+
+.flower {
+    width: 250px;
+    filter: drop-shadow(1px 5px 10px black);
+}
+
+
+button {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 50px;
+    width: 50px;
+    background-image: linear-gradient(rgb(243, 241, 247), rgb(221, 209, 245));
+    border: 0 solid;
+    margin: auto;
+    box-shadow: 0 2px 3px rgb(0, 0, 0, 0.2);
+    border-radius: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 0.5em black;
+    width: 52px;
+    height: 52px;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px #ffffff;
+
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.7s ease;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    background-color: white;
+    width: 600px;
+    max-width: 100%;
+    height: 600px;
+    border: 0 solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px rgba(64, 64, 64, 0.49);
+    padding: 30px 50px;
+    text-align: center;
+}
